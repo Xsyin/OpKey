@@ -26,20 +26,25 @@ public class SmsReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.d(TAG, "onReceive: ");
+        boolean isFirst = true;
         Bundle bundle = intent.getExtras();
-        SmsMessage msg = null;
+        SmsMessage msg;
         if (null != bundle){
             Object[] smsObj = (Object[])bundle.get("pdus");
             for (Object object: smsObj){
                 msg = SmsMessage.createFromPdu((byte[])object);
                 sender = msg.getDisplayOriginatingAddress();
                 String content = msg.getMessageBody();
-                if (content.indexOf("public key:") != -1){
+                if(isFirst && content.contains("public key:")){
+                    isFirst = false;
+                }else{
+                    return;
+                }
+                if (content.contains("public key:")){
                     publicKey = content.split(":")[1];
                 }else{
                     publicKey += content;
                 }
-
             }
             if(sender.startsWith("+86")){
                 sender = sender.substring(3,14);

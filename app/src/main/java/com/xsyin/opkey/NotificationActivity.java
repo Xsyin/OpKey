@@ -35,7 +35,7 @@ public class NotificationActivity extends AppCompatActivity {
 
 
         String phoneNumber = intent.getStringExtra("other_phone");
-        String publicKey = intent.getStringExtra("other_public_key");
+        String publicKey = intent.getStringExtra("other_public_key").trim();
         if (phoneNumber != null && publicKey != null){
             String contactNumber = phoneNumber.substring(0,3)+" "+phoneNumber.substring(3,7)+" "+phoneNumber.substring(7,11);
 //            String contactNumber = phoneNumber.substring(0,1)+" "+phoneNumber.substring(1,4)+"-"+phoneNumber.substring(4,7)+"-"+phoneNumber.substring(7,11);
@@ -81,7 +81,6 @@ public class NotificationActivity extends AppCompatActivity {
             }
 
         }
-        return;
     }
 
     public void createDialog(String message){
