@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xsyin.opkey.NotificationActivity">
+
+
+    <TextView
+        android:id="@+id/others_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="49dp"
+        android:text="别人的手机号：" />
+
+    <TextView
+        android:id="@+id/others_nu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/others_phone"
+        android:layout_alignBottom="@+id/others_phone"
+        android:layout_toEndOf="@+id/others_phone"
+        android:layout_toRightOf="@+id/others_phone"
+        android:text="  " />
+
+    <TextView
+        android:id="@+id/others_pk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/others_phone"
+        android:layout_marginTop="48dp"
+        android:text="别人的公钥：" />
+
+    <TextView
+        android:id="@+id/others_pkey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/others_pk"
+        android:layout_alignBottom="@+id/others_pk"
+        android:layout_toEndOf="@+id/others_pk"
+        android:layout_toRightOf="@+id/others_pk"
+        android:text="  " />
+
+
+    <Button
+        android:id="@+id/update_by_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="102dp"
+        android:text="写入通讯录" />
+
+</RelativeLayout>

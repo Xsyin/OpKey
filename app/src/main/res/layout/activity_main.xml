@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.xsyin.opkey.MainActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/get_pub_key_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="获取公钥" />
+
+
+    <Button
+        android:id="@+id/send_pk_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/others_nu"
+        android:layout_alignLeft="@+id/get_pub_key_btn"
+        android:layout_alignStart="@+id/get_pub_key_btn"
+        android:layout_marginBottom="14dp"
+        android:text="发送公钥至" />
+
+
+    <TextView
+        android:id="@+id/my_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/my_phone"
+        android:layout_alignBottom="@+id/my_phone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="我的手机号：" />
+
+    <EditText
+        android:id="@+id/my_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/get_pub_key_btn"
+        android:layout_toEndOf="@+id/copy_public_key"
+        android:layout_toRightOf="@+id/copy_public_key"
+        android:hint="my phone number" />
+
+    <TextView
+        android:id="@+id/my_pk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/my_phone"
+        android:layout_marginTop="17dp"
+        android:text="我的公钥：" />
+
+    <TextView
+        android:id="@+id/msg_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/my_pk"
+        android:layout_alignBottom="@+id/my_pk"
+        android:layout_toEndOf="@+id/others_phone"
+        android:layout_toRightOf="@+id/others_phone"
+        android:text="  " />
+
+    <TextView
+        android:id="@+id/others_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/others_pk"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp"
+        android:text="别人的手机号：" />
+
+    <TextView
+        android:id="@+id/others_nu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/others_phone"
+        android:layout_alignBottom="@+id/others_phone"
+        android:layout_toEndOf="@+id/others_phone"
+        android:layout_toRightOf="@+id/others_phone"
+        android:text="  " />
+
+    <TextView
+        android:id="@+id/others_pk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/update_by_sms"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="108dp"
+        android:text="别人的公钥：" />
+
+    <TextView
+        android:id="@+id/others_pkey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/others_pk"
+        android:layout_alignBottom="@+id/others_pk"
+        android:layout_toEndOf="@+id/others_pk"
+        android:layout_toRightOf="@+id/others_pk"
+        android:text="  " />
+
+    <Button
+        android:id="@+id/copy_public_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/send_pk_to"
+        android:layout_alignBottom="@+id/send_pk_to"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="复制公钥" />
+
+
+    <Button
+        android:id="@+id/update_by_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/send_pk_to"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/send_pk_to"
+        android:layout_marginBottom="29dp"
+        android:text="写入通讯录" />
+
+
+</RelativeLayout>
