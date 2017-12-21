@@ -35,11 +35,9 @@ public class SmsReceiver extends BroadcastReceiver {
                 msg = SmsMessage.createFromPdu((byte[])object);
                 sender = msg.getDisplayOriginatingAddress();
                 String content = msg.getMessageBody();
-                if(isFirst && content.contains("public key:")){
-                    isFirst = false;
-                }else{
+                if(isFirst && !content.contains("public key:"))
                     return;
-                }
+                isFirst = false;
                 if (content.contains("public key:")){
                     publicKey = content.split(":")[1];
                 }else{
